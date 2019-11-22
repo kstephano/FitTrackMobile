@@ -4,13 +4,13 @@
     // Titles for each activity to be shown in Toolbar.
     <string name='register_title'>Register</string>
 
-    <string name="username_hint">Enter your username here</string>
-    <string name="email_hint">Enter your Email here</string>
-    <string name="dob_hint">Choose your DOB</string>
-    <string name="password_hint">Enter password (8 character min)</string>
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="password_hint">Password (8 character min)</string>
     <string name="reenter_password_hint">Confirm password</string>
-    <string name="firstname_hint">Enter your first name</string>
-    <string name="lastname_hint">Enter your last name</string>
+    <string name="firstname_hint">First name</string>
+    <string name="lastname_hint">Last name</string>
 
     <string name="male">Male</string>
     <string name="female">Female</string>

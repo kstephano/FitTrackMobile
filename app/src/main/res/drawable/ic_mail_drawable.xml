@@ -2,10 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:drawable="@drawable/mail"
+        android:drawable="@drawable/ic_mail"
         android:width="20dp"
         android:height="20dp"
-        android:left="5dp"
-        />
+        android:left="20dp"
+        android:right="2dp"/>
 
 </layer-list >

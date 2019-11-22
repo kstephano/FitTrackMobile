@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.content.Intent
 import android.net.Uri
 import android.provider.MediaStore
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import com.google.android.material.datepicker.CalendarConstraints
+import com.google.android.material.datepicker.MaterialDatePicker
 import de.hdodenhof.circleimageview.CircleImageView
 import java.lang.Exception
 
@@ -50,12 +50,13 @@ class MainActivity : AppCompatActivity() {
 
         registerButton = findViewById<Button>(R.id.register_button) as Button
         radioGroup = findViewById<RadioGroup>(R.id.register_radioGroup) as RadioGroup
-        dateTV = findViewById<TextView>(R.id.register_dob_TV) as TextView
+        dateTV = findViewById<EditText>(R.id.register_dob_ET) as EditText
 
         setSupportActionBar(findViewById(R.id.register_toolbar))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle("Register an account")
     }
+
 
     fun profileIVonClick(view: View) {
         selectImageFromGallery()
