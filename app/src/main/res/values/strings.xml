@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">FitTrackMobile</string>
 
+    // Titles for each activity to be shown in Toolbar.
+    <string name='register_title'>Register</string>
+
     <string name="username_hint">Enter your username here</string>
     <string name="email_hint">Enter your Email here</string>
     <string name="dob_hint">Choose your DOB</string>
@@ -20,4 +23,5 @@
     <string name="autofill_password">AUTOFILL_HINT_PASSWORD</string>
 
     <string name="left_arrow">Go back</string>
+
 </resources>

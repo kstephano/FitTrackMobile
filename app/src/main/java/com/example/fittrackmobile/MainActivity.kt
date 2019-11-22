@@ -53,26 +53,12 @@ class MainActivity : AppCompatActivity() {
         dateTV = findViewById<TextView>(R.id.register_dob_TV) as TextView
 
         setSupportActionBar(findViewById(R.id.register_toolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     fun profileIVonClick(view: View) {
         selectImageFromGallery()
     }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.register_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item!!.itemId) {
-            R.id.back_button -> {
-                true
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
 
     private fun openImageGallery() {
         try {
