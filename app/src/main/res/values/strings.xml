@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FitTrackMobile</string>
+
+    <string name="username_hint">Enter your username here</string>
+    <string name="email_hint">Enter your Email here</string>
+    <string name="dob_hint">Choose your DOB</string>
+    <string name="password_hint">Enter password (8 character min)</string>
+    <string name="reenter_password_hint">Confirm password</string>
+    <string name="firstname_hint">Enter your first name</string>
+    <string name="lastname_hint">Enter your last name</string>
+
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="register">Register now</string>
+
+    <string name="autofill_firstname">AUTOFILL_HINT_PERSON_NAME_PREFIX</string>
+    <string name="autofill_lastname">AUTOFILL_HINT_PERSON_NAME_GIVEN</string>
+    <string name="autofill_username">AUTOFILL_HINT_USERNAME</string>
+    <string name="autofill_password">AUTOFILL_HINT_PASSWORD</string>
+
+    <string name="left_arrow">Go back</string>
+</resources>
