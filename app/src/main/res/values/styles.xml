@@ -1,17 +1,31 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="Theme.MaterialComponents.Light." parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.MaterialComponents.Light." parent="Theme.MaterialComponents.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Theme for TextInputLayouts. -->
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/colorPrimary</item>
         <item name="boxStrokeWidth">2dp</item>
         <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- Theme for activity_register date picker dialog. -->
+    <style name="MyDialogTheme" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Theme for activity_register date picker. -->
+    <style name="MyDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
     </style>
 
 </resources>

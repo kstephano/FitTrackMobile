@@ -137,6 +137,7 @@
             android:layout_width="275dp"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_dob_drawable"
+            android:drawablePadding="3dp"
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:inputType='text'
