@@ -12,7 +12,7 @@
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/colorPrimary</item>
         <item name="boxStrokeWidth">2dp</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="hintTextColor">@color/colorPrimary</item>
     </style>
 
     <!-- Theme for activity_register date picker dialog. -->

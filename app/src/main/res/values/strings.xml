@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">FitTrackMobile</string>
 
-    // Titles for each activity to be shown in Toolbar.
-    <string name='register_title'>Register</string>
+    <!-- Titles for toolbars -->
+    <string name='register_title'>Register An Account</string>
+    <string name='login_title'>Login</string>
 
+    <!-- User data fields hints -->
     <string name="username_hint">Username</string>
     <string name="email_hint">Email</string>
     <string name="dob_hint">Date of Birth</string>
@@ -12,16 +14,24 @@
     <string name="firstname_hint">First name</string>
     <string name="lastname_hint">Last name</string>
 
+    <!-- Radio button strings -->
     <string name="male">Male</string>
     <string name="female">Female</string>
 
-    <string name="register">Register now</string>
+    <!-- Button strings -->
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 
+    <!-- TextView strings -->
+    <string name="newuser">New user?</string>
+
+    <!-- Autofill strings -->
     <string name="autofill_firstname">AUTOFILL_HINT_PERSON_NAME_PREFIX</string>
     <string name="autofill_lastname">AUTOFILL_HINT_PERSON_NAME_GIVEN</string>
     <string name="autofill_username">AUTOFILL_HINT_USERNAME</string>
     <string name="autofill_password">AUTOFILL_HINT_PASSWORD</string>
 
+    <!--  -->
     <string name="left_arrow">Go back</string>
 
 </resources>

@@ -6,22 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/register_user_profilepic_IV"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="5dp"
-        android:onClick="profileIVonClick"
-        android:src="@drawable/profilepic"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_toolbar" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/register_toolbar"
         android:layout_width="match_parent"
@@ -34,12 +18,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/register_user_profilepic_IV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:onClick="profileIVonClick"
+        android:src="@drawable/profilepic"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_toolbar" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_user_TL"
+        style="@style/TextInputLayoutStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:hint="@string/username_hint"
-        style="@style/TextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_user_profilepic_IV">
@@ -50,17 +51,18 @@
             android:layout_height="wrap_content"
             android:autofillHints=".AUTOFILL_HINT_USERNAME"
             android:inputType="text"
+            android:textCursorDrawable="@null"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_email_TL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
         android:hint="@string/email_hint"
+        style="@style/TextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,13 +73,13 @@
             android:layout_width="275dp"
             android:layout_height="wrap_content"
             android:inputType='textEmailAddress'
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_firstname_TL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -85,6 +87,7 @@
         android:layout_marginEnd="5dp"
         android:gravity="center"
         android:hint="@string/firstname_hint"
+        style="@style/TextInputLayoutStyle"
         app:layout_constraintEnd_toStartOf="@+id/register_lastname_TL"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,18 +99,19 @@
             android:layout_height="wrap_content"
             android:autofillHints="@string/autofill_firstname"
             android:inputType='text'
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_lastname_TL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="68dp"
         android:gravity="center"
         android:hint="@string/lastname_hint"
+        style="@style/TextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_email_TL">
 
@@ -117,17 +121,18 @@
             android:layout_height="wrap_content"
             android:autofillHints="@string/autofill_firstname"
             android:inputType='text'
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_dob_TL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
         android:hint="@string/dob_hint"
+        style="@style/TextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_firstname_TL">
@@ -141,17 +146,18 @@
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:inputType='text'
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_password_TL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
         android:hint="@string/password_hint"
+        style="@style/TextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_dob_TL">
@@ -162,17 +168,18 @@
             android:layout_height="wrap_content"
             android:autofillHints="@string/autofill_password"
             android:inputType='textPassword'
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_reenter_TL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
         android:hint="@string/reenter_password_hint"
+        style="@style/TextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_password_TL">
@@ -182,7 +189,8 @@
             android:layout_width="275dp"
             android:layout_height="wrap_content"
             android:inputType='textPassword'
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
@@ -215,8 +223,9 @@
         android:id="@+id/register_button"
         android:layout_width="131dp"
         android:layout_height="58dp"
+        android:onClick="registerButtonOnClick"
         android:text="@string/register"
-        app:backgroundTint="@color/colorAccent"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_radioGroup" />
