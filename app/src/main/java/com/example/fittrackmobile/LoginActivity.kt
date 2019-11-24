@@ -22,6 +22,11 @@ class LoginActivity: AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         attachJavaToXML()
+
+        // Set the tool bar.
+        setSupportActionBar(findViewById(R.id.login_toolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(R.string.login_title)
     }
 
     private fun attachJavaToXML() {
@@ -38,7 +43,7 @@ class LoginActivity: AppCompatActivity() {
 
     fun registerButtonOnClick(view: View) {
         try {
-            val registerIntent = Intent(applicationContext, MainActivity::class.java)
+            val registerIntent = Intent(applicationContext, RegisterActivity::class.java)
             startActivity(registerIntent)
         } catch (e: Exception) {
             Toast.makeText(this, "LoginActivity: " + e.message, Toast.LENGTH_SHORT).show()

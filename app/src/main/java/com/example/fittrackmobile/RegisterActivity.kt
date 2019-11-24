@@ -18,14 +18,13 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
 import de.hdodenhof.circleimageview.CircleImageView
-import kotlinx.android.synthetic.main.activity_register.*
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
 
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
     // Companion object to hold static class variables.
     companion object {
@@ -100,7 +99,7 @@ class MainActivity : AppCompatActivity() {
         // Set the data picker dialog to show when the date TextView object is clicked.
         dateET.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View) {
-                val dpd = DatePickerDialog(this@MainActivity,
+                val dpd = DatePickerDialog(this@RegisterActivity,
                     R.style.MyDialogTheme,
                     dateSetListener,
                     cal.get(Calendar.YEAR),
@@ -148,7 +147,7 @@ class MainActivity : AppCompatActivity() {
                     }).addOnFailureListener(object : OnFailureListener {
                         // Executes upon failure to authenticate user account.
                         override fun onFailure(e: Exception) {
-                            Toast.makeText(this@MainActivity,
+                            Toast.makeText(this@RegisterActivity,
                                 "Failed to create user: " + e.message, Toast.LENGTH_SHORT).show()
                         }
                     })
@@ -192,7 +191,7 @@ class MainActivity : AppCompatActivity() {
                 uploadTask.continueWithTask(object : Continuation<UploadTask.TaskSnapshot, Task<Uri>> {
                     override fun then (@NonNull task: Task<UploadTask.TaskSnapshot>): Task<Uri> {
                         if (!task.isSuccessful) {
-                            Toast.makeText(this@MainActivity, "Couldn't upload image"
+                            Toast.makeText(this@RegisterActivity, "Couldn't upload image"
                                     + task.exception, Toast.LENGTH_SHORT).show()
                         }
                         return imageRef.downloadUrl
@@ -203,7 +202,7 @@ class MainActivity : AppCompatActivity() {
                         // If the execution of the upload task is successful.
                         if (task.isSuccessful) {
 
-                            Toast.makeText(this@MainActivity,
+                            Toast.makeText(this@RegisterActivity,
                                 "Uploading user data", Toast.LENGTH_SHORT).show()
 
                             // HashMap used to store objects in database.
@@ -226,9 +225,7 @@ class MainActivity : AppCompatActivity() {
                             hashMap.put("numberoflikes", 0)
                             hashMap.put("numberofimagestatus", 0)
                             hashMap.put("numberoftextstatus", 0)
-                            hashMap.put("usercity", "NA")
-                            hashMap.put("usercountry", "NA")
-                            hashMap.put("userbio", "NA")
+                            hashMap.put("streakvalue", 0)
 
                             // Create a new Firebase collection to store documents.
                             // Each user is represented by a document, which contains
@@ -243,25 +240,25 @@ class MainActivity : AppCompatActivity() {
                                             firebaseAuth.signOut()
                                         }
 
+                                        Toast.makeText(this@RegisterActivity,
+                                            "Successfully registered user",
+                                            Toast.LENGTH_SHORT).show()
+
                                         val loginIntent = Intent(
                                             applicationContext, LoginActivity::class.java)
                                         startActivity(loginIntent)
-
-                                        Toast.makeText(this@MainActivity,
-                                            "Successfully registered user",
-                                            Toast.LENGTH_SHORT).show()
                                     }
                                 })
                                 .addOnFailureListener(object : OnFailureListener {
                                     override fun onFailure(@NonNull e: Exception) {
-                                        Toast.makeText(this@MainActivity,
+                                        Toast.makeText(this@RegisterActivity,
                                             "Failed to upload user data: " + e.message,
                                             Toast.LENGTH_SHORT).show()
                                     }
                                 })
 
                         } else if (!task.isSuccessful) {
-                            Toast.makeText(this@MainActivity,
+                            Toast.makeText(this@RegisterActivity,
                                 "RegisterActivity: " + task.exception.toString(),
                                 Toast.LENGTH_SHORT).show()
                         }
@@ -298,10 +295,14 @@ class MainActivity : AppCompatActivity() {
     /**
      * Called when the CircleImageView is clicked. Opens the image gallery.
      */
+
     fun profileIVonClick(view: View) {
         openImageGallery()
     }
 
+    /**
+     * Called when the register button is clicked. Sends the user data to the database.
+     */
     fun registerButtonOnClick(view: View) {
         createAccount()
     }
@@ -328,9 +329,9 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // Sets the profile image if the selected data is valid (i.e. not null).
-        if(data?.data != null && data != null) {
+        if(data?.data != null) {
             profileImageURL = data.data
-            profileIV?.setImageURI(profileImageURL)
+            profileIV.setImageURI(profileImageURL)
         } else {
             Toast.makeText(this, "No image selected", Toast.LENGTH_SHORT).show()
         }
