@@ -2,10 +2,16 @@
     <string name="app_name">FitTrackMobile</string>
 
     <!-- Titles for toolbars -->
-    <string name='register_title'>Register An Account</string>
-    <string name='login_title'>Login</string>
+    <string name="title_register_page">Register</string>
+    <string name="title_login_page">Login</string>
+    <string name="title_profile_page">Profile</string>
+    <string name="title_comments_page">Comments</string>
+    <string name="title_notifications_page">Notifications</string>
+    <string name="title_friends_page">Friends</string>
+    <string name="title_app_nav_menu">Home</string>
 
-    <!-- User data fields hints -->
+
+    <!-- Text field hints -->
     <string name="username_hint">Username</string>
     <string name="email_hint">Email</string>
     <string name="dob_hint">Date of Birth</string>
@@ -13,17 +19,56 @@
     <string name="reenter_password_hint">Confirm password</string>
     <string name="firstname_hint">First name</string>
     <string name="lastname_hint">Last name</string>
+    <string name="textstatus_hint">Write a status update… (max 200 characters)</string>
+    <string name="imagestatus_hint">Write a description… (max 100 characters)</string>
+    <string name="enter_comment_hint">Write a comment…</string>
+    <string name="username_edit_hint">Enter user name here…</string>
+    <string name="enter_bio_here_hint">Enter bio here…</string>
+    <string name="enter_country_hint">Enter country here…</string>
+    <string name="enter_city_hint">Enter city here…</string>
+    <string name="search_friends_hint">Search for a person…</string>
 
     <!-- Radio button strings -->
-    <string name="male">Male</string>
-    <string name="female">Female</string>
+    <string name="male_rb">Male</string>
+    <string name="female_rb">Female</string>
 
     <!-- Button strings -->
-    <string name="register">Register</string>
-    <string name="login">Login</string>
+    <string name="register_btn">Register</string>
+    <string name="login_btn">Login</string>
+    <string name="publish_status_btn">Publish Status</string>
+    <string name="rewrite_status_btn">Rewrite Status</string>
+    <string name="go_back_btn">Go Back</string>
+    <string name="bio_btn">Bio</string>
+    <string name="edit_btn">Edit</string>
+    <string name="update_profile_btn">Update</string>
+    <string name="send_friend_request_btn">Send friend request</string>
+    <string name="remove_friend_btn">Remove friend</string>
+    <string name="accept_request_btn">Accept request</string>
 
     <!-- TextView strings -->
-    <string name="newuser">New user?</string>
+    <string name="newuser_tv">New user?</string>
+    <string name="please_wait_tv">Please wait</string>
+    <string name="user_name_header_tv">USER NAME</string>
+    <string name="user_email_header_tv">userEmail@email.com</string>
+    <string name="default_email_tv">email@email.com</string>
+    <string name="default_date_tv">00:00:00 01 Jan 2020</string>
+    <string name="default_text_status_tv">No text status found.</string>
+    <string name="default_image_description_tv">No image description</string>
+    <string name="default_firstname_tv">First Name</string>
+    <string name="default_comment_tv">Default comment text</string>
+    <string name="default_notification_action_tv">liked your status.</string>
+    <string name="score_tv">Score</string>
+    <string name="text_tv">Text</string>
+    <string name="images_tv">Images</string>
+    <string name="user_name_tv">Username</string>
+    <string name="user_bio_tv">Bio</string>
+    <string name="user_country_tv">Country</string>
+    <string name="city_tv">City</string>
+    <string name="user_bio_title_tv">BIO</string>
+    <string name="user_bio_exit_tv">X</string>
+    <string name="user_bio_main_tv">Empty bio</string>
+    <string name="profile_progress_tv">Progress towards fitness goal:</string>
+    <string name="full_name_tv">firstName lastName</string>
 
     <!-- Autofill strings -->
     <string name="autofill_firstname">AUTOFILL_HINT_PERSON_NAME_PREFIX</string>
@@ -31,7 +76,70 @@
     <string name="autofill_username">AUTOFILL_HINT_USERNAME</string>
     <string name="autofill_password">AUTOFILL_HINT_PASSWORD</string>
 
-    <!--  -->
-    <string name="left_arrow">Go back</string>
+    <!-- Menu strings -->
+    <string name="text_statuses">Text Statuses</string>
+    <string name="image_statuses">Image Statuses</string>
+    <string name="favourites">Favourites</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="diary_icon_title_item">Diary</string>
+    <string name="progress_icon_title_item">Progress</string>
+    <string name="settings_icon_title_item">Settings</string>
+    <string name="about_title_item">ABOUT YOU</string>
+    <string name="profile_title_item">PROFILE</string>
+    <string name="notifications_title_item">NOTIFICATIONS</string>
+    <string name="settings_title_item">SETTINGS</string>
+    <string name="about_friends_title_item">ABOUT YOUR FRIENDS</string>
+    <string name="favourites_title_item">FAVOURITES</string>
+    <string name="friends_title_item">FRIENDS</string>
+    <string name="sign_out_title_item">SIGN OUT</string>
+
+    <!-- Toast messages strings -->
+    <string name="nobody_logged_in_msg">No user currently logged in</string>
+    <string name="enter_status_msg">Please enter a status.</string>
+    <string name="enter_image_status_msg">Please choose an image first.</string>
+    <string name="enter_image_status_description">Please enter a text description.</string>
+    <string name="status_published">Status Published</string>
+    <string name="enter_comment_msg">No comment entered</string>
+    <string name="commented_added_msg">Comment uploaded</string>
+    <string name="status_deleted_msg">Status deleted successfully</string>
+    <string name="favourite_status_added_msg">Status added to favourites</string>
+    <string name="already_favourited_msg">Status already added to favourites</string>
+    <string name="notifications_cleared_msg">Notifications cleared</string>
+    <string name="no_image_selected_msg">No image was selected</string>
+    <string name="cant_upload_image_msg">Couldn\'t upload image</string>
+    <string name="profile_successfully_updated_msg">Profile Updated Successfully</string>
+    <string name="friend_removed_msg">Friend removed successfully</string>
+    <string name="friend_request_sent_msg">Friend request sent</string>
+    <string name="accept_request_msg">Friend request accepted</string>
+
+    <!-- Menu item strings -->
+    <string name="menu_item_clear">CLEAR</string>
+    <string name="menu_item_go_back">GO BACK</string>
+    <string name="menu_item_notifications">Notifications</string>
+    <string name="menu_item_profile">PROFILE</string>
+    <string name="menu_item_settings">SETTINGS</string>
+
+    <!-- Content Description strings -->
+    <string name="content_description_image_status">Uploaded image</string>
+    <string name="content_description_remove_favourite">Remove from favourites icon</string>
+
+    <!-- Logcat strings -->
+    <string name="logcat_no_user">No user logged in.</string>
+    <string name="logcat_favourite_status_fail">Couldn\'t add status to favourites</string>
+    <string name="logcat_remove_favourite_fail">Couldn\'t remove status:</string>
+    <string name="logcat_obtain_document_reference_fail">Failed to obtain document reference: </string>
+    <string name="logcat_unable_to_clear_notifications">Couldn\'t clear notifications</string>
+    <string name="logcat_notifications_retrieval_error">Error getting notifications:</string>
+    <string name="logcat_signed_out">User signed out</string>
+
+    <!-- numbers -->
+    <string name="_0">0</string>
+    <string name="content_description_favourite_icon">Favourite icon</string>
+    <string name="content_description_back_button">Back button</string>
+    <string name="content_description_search_button">Search button</string>
+    <string name="content_description_remove_friend">Remove friend button</string>
+    <string name="content_description_send_comment">Send comment button</string>
+    <string name="content_description_logo">FitTrack logo</string>
 
 </resources>

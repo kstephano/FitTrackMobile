@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/favourite_is_layoutRL"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/smoothborders_white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/favourite_is_imageIV"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imageplaceholder"
+        android:contentDescription="@string/content_description_image_status"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/favourite_is_profilePicIV"
+        android:src="@drawable/profilepic"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/favourite_is_firstNameTV"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/default_firstname_tv"
+        android:layout_below="@id/favourite_is_imageIV"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/favourite_is_dateTV"
+        android:text="@string/default_date_tv"
+        android:textColor="@color/colorPrimaryText"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@id/favourite_is_firstNameTV"
+        android:layout_below="@id/favourite_is_imageIV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/favourite_is_imageDescriptionTV"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_below="@id/favourite_is_dateTV"
+        android:text="@string/default_image_description_tv"
+        android:textColor="@color/colorSecondaryText"
+        android:paddingTop="5dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/remove_favorite"
+        android:scaleType="centerCrop"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/favourite_is_removeStatusIV"/>
+
+
+</RelativeLayout>

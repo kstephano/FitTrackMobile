@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frag_addTextStatus_RL"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".fragments.AddTextStatusFragment">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/frag_addTextStatus_textStatusET"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/smoothborders_white"
+        android:hint="@string/textstatus_hint"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="12sp"
+        android:gravity="top|start"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:maxLength="200"
+        android:singleLine="true"
+        android:inputType="text"
+        android:importantForAutofill="no"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frag_addTextStatuses_inner_RL"
+        android:gravity="center"
+        android:layout_below="@+id/frag_addTextStatus_textStatusET">
+
+        <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="@string/publish_status_btn"
+        android:textSize="12sp"
+        android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            app:backgroundTint="@color/colorPrimary"
+        android:id="@+id/frag_addTextStatus_publishStatusBtn"
+        android:layout_alignParentStart="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/rewrite_status_btn"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:id="@+id/frag_addTextStatus_rewriteStatusBtn"
+            android:layout_toEndOf="@id/frag_addTextStatus_publishStatusBtn" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frag_addTextStatus_goBackFAB"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginStart="20dp"
+        app:fabSize="normal"
+        android:src="@drawable/ic_arrow_left"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@string/content_description_back_button"/>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/frag_addTextStatus_progressBar"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/AddStatuses_RL"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.AddStatusesActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddStatuses_TabLayout"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorPrimaryLight"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/colorWhite" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/AddStatuses_ViewPager"
+        android:layout_below="@+id/AddStatuses_TabLayout"/>
+</RelativeLayout>

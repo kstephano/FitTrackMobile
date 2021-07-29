@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".fragments.SettingsFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/profilepic"
+        android:scaleType="centerCrop"
+        android:id="@+id/frag_settings_profilePicIV"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorPrimary"
+        android:text="@string/edit_btn"
+        android:textSize="8sp"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:id="@+id/frag_settings_editProfilePicBtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/user_name_tv"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:id="@+id/frag_settings_userNameTV"
+        android:typeface="monospace"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/frag_settings_editProfilePicBtn"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textCursorDrawable="@color/colorDivider"
+        android:maxLength="20"
+        android:inputType="textShortMessage"
+        android:autofillHints="@string/autofill_username"
+        android:id="@+id/frag_settings_userNameET"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/username_edit_hint"
+        android:gravity="center|start"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_below="@id/frag_settings_userNameTV"
+        android:background="@drawable/settings_et_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/user_bio_tv"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:id="@+id/frag_settings_userBioTV"
+        android:typeface="monospace"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/frag_settings_userNameET"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:textSize="10sp"
+        android:textCursorDrawable="@color/colorDivider"
+        android:maxLength="100"
+        android:id="@+id/frag_settings_userBioET"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/enter_bio_here_hint"
+        android:gravity="center|start"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_below="@id/frag_settings_userBioTV"
+        android:background="@drawable/settings_et_background"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/city_tv"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:id="@+id/frag_settings_userCityTV"
+        android:typeface="monospace"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/frag_settings_userBioET"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textCursorDrawable="@color/colorDivider"
+        android:maxLength="20"
+        android:id="@+id/frag_settings_userCityET"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/enter_city_hint"
+        android:gravity="center|start"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_below="@id/frag_settings_userCityTV"
+        android:background="@drawable/settings_et_background"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/user_country_tv"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:id="@+id/frag_settings_userCountryTV"
+        android:typeface="monospace"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/frag_settings_userCityET"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textCursorDrawable="@color/colorDivider"
+        android:maxLength="20"
+        android:id="@+id/frag_settings_userCountryET"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/enter_country_hint"
+        android:gravity="center|start"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_below="@id/frag_settings_userCountryTV"
+        android:background="@drawable/settings_et_background"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_profile_btn"
+        android:textSize="12sp"
+        app:backgroundTint="@color/colorPrimary"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/frag_settings_updateProfileBtn"
+        android:layout_below="@id/frag_settings_userCountryET"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

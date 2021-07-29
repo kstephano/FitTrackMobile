@@ -9,26 +9,84 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
-        <activity
-            android:name=".RegisterActivity"
-            android:parentActivityName=".LoginActivity" >
 
+        <!-- PROFILE ACTIVITY -->
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:parentActivityName=".activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.fittrackmobile.LoginActivity"/>
+                android:value="com.example.fittrackmobile.activities.HomeActivity" />
+
         </activity>
 
+        <!-- NOTIFICATIONS ACTIVITY -->
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/login_title" >
+            android:name=".activities.NotificationsActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HomeActivity"/>
+        </activity>
 
+        <!-- ADD STATUSES ACTIVITY -->
+        <activity
+            android:name=".activities.AddStatusesActivity">
+
+        </activity>
+
+        <!-- REGISTER ACTIVITY -->
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:parentActivityName=".activities.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.fittrackmobile.activities.LoginActivity" />
+        </activity>
+
+        <!-- Login ACTIVITY -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_login_page" />
+
+        <!-- HOME PAGE ACTIVITY -->
+        <activity android:name=".activities.HomeActivity">
             <intent-filter>
-                <action
-                    android:name="android.intent.action.MAIN" />
-                <category
-                    android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- TEXT STATUS COMMENTS ACTIVITY -->
+        <activity
+            android:name=".activities.TextStatusCommentsActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HomeActivity"/>
+        </activity>
+
+        <!-- IMAGE STATUS COMMENTS ACTIVITY -->
+        <activity
+            android:name=".activities.ImageStatusCommentsActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HomeActivity"/>
+        </activity>
+
+        <!-- FRIENDS LIST ACTIVITY -->
+        <activity android:name=".activities.FriendsListActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HomeActivity"/>
+        </activity>
+        <activity android:name=".activities.DiaryActivity" />
+        <activity android:name=".activities.ProgressActivity" />
+        <activity android:name=".activities.SettingsActivity" />
+
     </application>
 
 </manifest>

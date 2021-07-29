@@ -28,4 +28,15 @@
         <item name="android:datePickerMode">spinner</item>
     </style>
 
+    <!-- -->
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:listPreferredItemHeightSmall">25dp</item>
+        <item name="android:listPreferredItemPaddingLeft">12dp</item>
+        <item name="listPreferredItemPaddingLeft">15dp</item>
+        <item name="android:listPreferredItemPaddingRight">8dp</item>
+        <item name="listPreferredItemPaddingRight">12dp</item>
+        <item name="android:listDivider">@color/colorNavText</item>
+        <item name="android:textColorSecondary">@color/colorNavText</item>
+    </style>
 </resources>

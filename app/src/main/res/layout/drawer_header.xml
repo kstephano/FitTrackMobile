@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@color/colorAccent">
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/header_progressBar"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:visibility="invisible"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/header_profilePic"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/profilepic"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_userName_tv"
+        android:textSize="18sp"
+        android:text="@string/user_name_header_tv"
+        android:layout_toEndOf="@+id/header_profilePic"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_userEmail_tv"
+        android:textSize="11sp"
+        android:layout_below="@id/header_userName_tv"
+        android:layout_toEndOf="@id/header_profilePic"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="13dp"/>
+
+</RelativeLayout>

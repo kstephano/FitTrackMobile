@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frag_addImageStatuses_RL"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".fragments.AddImageStatusFragment">
+
+    <ImageView
+        android:id="@+id/frag_addImageStatus_getImageIV"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imageplaceholder"
+        android:contentDescription="@string/content_description_image_status"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/frag_addImageStatus_descriptionET"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/smoothborders_white"
+        android:layout_below="@id/frag_addImageStatus_getImageIV"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="12sp"
+        android:textColorHint="@color/colorPrimary"
+        android:hint="@string/imagestatus_hint"
+        android:inputType="textMultiLine"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="top|start"
+        android:maxLength="100"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="@string/publish_status_btn"
+        android:layout_marginTop="4dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:textSize="12sp"
+        android:layout_below="@id/frag_addImageStatus_descriptionET"
+        android:id="@+id/frag_addImageStatus_publishStatusBtn"
+        android:textColor="@color/colorWhite"
+        android:layout_centerInParent="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frag_addImageStatus_goBackFAB"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginStart="20dp"
+        app:fabSize="normal"
+        android:src="@drawable/ic_arrow_left"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@string/content_description_back_button"/>
+
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/frag_addImageStatus_progressBar"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

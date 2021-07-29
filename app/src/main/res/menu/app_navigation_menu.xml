@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/title_app_nav_menu"
+        android:id="@+id/app_menu_item_home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="@string/diary_icon_title_item"
+        android:id="@+id/app_menu_item_diary"
+        android:icon="@drawable/ic_diary"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="@string/progress_icon_title_item"
+        android:id="@+id/app_menu_item_progress"
+        android:icon="@drawable/ic_progress"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="@string/settings_icon_title_item"
+        android:id="@+id/app_menu_item_settings"
+        android:icon="@drawable/ic_settings_2"
+        app:showAsAction="always"/>
+
+</menu>

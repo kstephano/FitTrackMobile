@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:id="@+id/text_status_layout_RL"
+    android:background="@drawable/smoothborders_white"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/text_status_layout_favouriteIV"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="-3dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_favourite_status"
+        android:contentDescription="@string/content_description_favourite_icon"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/profilepic"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/text_status_layout_profileIV"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/text_status_layout_firstNameTV"
+        android:layout_toEndOf="@id/text_status_layout_profileIV"
+        android:text="@string/default_email_tv"
+        android:textColor="@color/colorBlack"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/text_status_layout_dateTV"
+        android:text="@string/default_date_tv"
+        android:textColor="@color/colorBlack"
+        android:textSize="10sp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/text_status_layout_firstNameTV"
+        android:layout_toEndOf="@+id/text_status_layout_profileIV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/text_status_layout_textStatusTV"
+        android:text="@string/default_text_status_tv"
+        android:textColor="@color/colorBlack"
+        android:textSize="17sp"
+        android:layout_below="@+id/text_status_layout_profileIV"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/text_status_reactsLL"
+        android:orientation="horizontal"
+        android:layout_below="@id/text_status_layout_textStatusTV" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/text_status_layout_heartIV"
+            android:src="@drawable/ic_heart"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/text_status_layout_heartCountTV"
+            android:text="@string/_0"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="bottom|start"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/text_status_Layout_hahaIV"
+            android:src="@drawable/haha"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/text_status_layout_hahaCountTV"
+            android:text="@string/_0"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="bottom|start"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/text_status_Layout_sadIV"
+            android:src="@drawable/crying"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/text_status_layout_sadCountTV"
+            android:text="@string/_0"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="bottom|start"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/text_status_Layout_commentsIV"
+            android:src="@drawable/comments"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/text_status_layout_commentCountTV"
+            android:text="@string/_0"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="bottom|start"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/text_status_Layout_deleteIV"
+            android:src="@drawable/ic_delete"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

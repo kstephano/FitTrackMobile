@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:id="@+id/favourite_ts_layout_RL"
+    android:background="@drawable/smoothborders_white">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/remove_favorite"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/favourite_ts_layout_removeStatusIV"
+        android:contentDescription="@string/content_description_remove_favourite"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/profilepic"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/favourite_ts_layout_profilePicIV"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/default_firstname_tv"
+        android:id="@+id/favourite_ts_layout_firstNameTV"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_toEndOf="@id/favourite_ts_layout_profilePicIV"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/favourite_ts_layout_dateTV"
+        android:layout_below="@id/favourite_ts_layout_firstNameTV"
+        android:layout_toEndOf="@id/favourite_ts_layout_profilePicIV"
+        android:text="@string/default_date_tv"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="10sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingStart="10dp"
+        android:id="@+id/favourite_ts_layout_statusTV"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="17sp"
+        android:layout_below="@id/favourite_ts_layout_dateTV"
+        android:text="@string/default_text_status_tv"
+        android:paddingEnd="10dp"/>
+
+</RelativeLayout>

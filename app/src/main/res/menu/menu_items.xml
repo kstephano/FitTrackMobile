@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/group_item_1"
+        android:title="@string/about_title_item">
+
+        <menu>
+             <item
+                android:id="@+id/item_profile"
+                 android:title="@string/profile_title_item"
+                 android:icon="@drawable/ic_profile"
+                 android:checked="true"/>
+
+            <item
+                android:id="@+id/item_notifications"
+                android:title="@string/notifications_title_item"
+                android:icon="@drawable/ic_notifications"
+                android:checked="true"
+                app:actionViewClass="android.widget.TextView"/>
+
+            <item
+                android:id="@+id/item_settings"
+                android:title="@string/settings_title_item"
+                android:icon="@drawable/ic_settings"
+                android:checked="true"/>
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/group_item_2"
+        android:title="@string/about_friends_title_item">
+
+        <menu>
+            <item
+                android:id="@+id/item_favourites"
+                android:title="@string/favourites_title_item"
+                android:icon="@drawable/ic_favourite"
+                android:checked="true"/>
+
+            <item
+                android:id="@+id/item_friends"
+                android:title="@string/friends_title_item"
+                android:icon="@drawable/ic_gender_profile_icon"
+                android:checked="true"/>
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/item_signout"
+        android:title="@string/sign_out_title_item"
+        android:icon="@drawable/ic_signout"
+        android:checked="true"/>
+
+</menu>

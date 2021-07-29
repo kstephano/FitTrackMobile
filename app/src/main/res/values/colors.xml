@@ -9,4 +9,8 @@
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorTextIcons">#FFFFFF</color>
     <color name="transparent">#00000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorNavText">#FF5252</color>
+    <color name="colorProgressBar">#32a852</color>
 </resources>

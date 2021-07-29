@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/notifications_menu_item_clear"
+        android:title="@string/menu_item_clear"
+        android:icon="@drawable/ic_delete"
+        android:iconTint="@color/colorWhite"
+        android:checkable="true"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/notifications_menu_item_goBack"
+        android:title="@string/menu_item_go_back"
+        android:icon="@drawable/ic_arrow_left"
+        android:checkable="true"
+        app:showAsAction="always"/>
+</menu>
